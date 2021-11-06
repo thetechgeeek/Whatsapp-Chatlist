@@ -1,0 +1,400 @@
+:root {
+  --font-family: 'Poppins', system-ui;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  max-width: 1920px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  font-family: var(--font-family);
+  color: var(--dark-color);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.orb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 1140px;
+  padding: 4rem 4rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.overlay__inner {
+  max-width: 36rem;
+}
+
+.overlay__title {
+  font-size: 1.875rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.overlay__description {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.overlay__btns {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+}
+
+.overlay__btn {
+  width: 150px;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 150ms ease;
+  outline-color: hsl(var(--hue), 95%, 50%);
+}
+
+.overlay__btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Not too many browser support this yet but it's good to add! */
+@media (prefers-contrast: high) {
+  .orb-canvas {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .overlay {
+    padding: 4rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .overlay {
+    padding: 4rem;
+    height: auto;
+  }
+
+  .overlay__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay__description {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .overlay__btns {
+    flex-wrap: wrap;
+  }
+
+  .overlay__btn {
+    width: 100%;
+    font-size: 0.75rem;
+    margin-right: 0;
+  }
+
+  .overlay__btn:first-child {
+    margin-bottom: 1rem;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.ks-messenger {
+  margin: auto;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: inline-block;
+  height: 100%;
+}
+
+.ks-messenger .ks-discussions {
+  border-radius: 5px 5px 5px 5px;
+  background: #fff;
+  width: 340px;
+  border-right: 1px solid #dee0e1;
+}
+
+.ks-messenger .ks-discussions > .ks-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #dee0e1;
+}
+
+.ks-messenger .ks-discussions > .ks-search .form-control {
+  border: none;
+  padding: 28px 20px;
+}
+
+.ks-messenger .ks-discussions > .ks-search .icon-addon {
+  color: rgba(58, 82, 155, 0.6);
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items > .ks-item {
+  border-bottom: 1px solid #dee0e1;
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items > .ks-item > a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #333;
+  padding: 15px 20px;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-group-amount {
+  position: relative;
+  top: 3px;
+  margin-right: 12px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(57, 81, 155, 0.1);
+  text-align: center;
+  line-height: 36px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-group-amount
+  > .ks-badge {
+  position: absolute;
+  bottom: -1px;
+  right: -3px;
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items > .ks-item > a > .ks-avatar {
+  position: relative;
+  top: 3px;
+  margin-right: 12px;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-avatar
+  > img {
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-avatar
+  > .ks-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items > .ks-item > a > .ks-body {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-body
+  > .ks-message {
+  font-size: 12px;
+  color: #858585;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-body
+  > .ks-message
+  > img {
+  position: relative;
+  top: -2px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-body
+  > .ks-name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  margin-bottom: 4px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item
+  > a
+  > .ks-body
+  > .ks-name
+  > .ks-datetime {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  color: #858585;
+  position: relative;
+  top: 3px;
+}
+
+.ks-messenger .ks-discussions > .ks-body .ks-items > .ks-item.ks-active {
+  background: rgba(247, 202, 24, 0.1);
+  color: #333;
+  position: relative;
+}
+
+.ks-messenger
+  .ks-discussions
+  > .ks-body
+  .ks-items
+  > .ks-item.ks-active::before {
+  content: '';
+  width: 4px;
+  height: 100%;
+  background-color: rgba(222, 187, 12, 0.2);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
