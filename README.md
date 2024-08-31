@@ -13,7 +13,7 @@
     <a href="https://github.com/thetechgeeek/Whatsapp-Chatlist"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://whatsapp-chatlist.herokuapp.com/">View Live version(Takes 10s to load)</a>
+    <a href="https://whatsapp-yc9a.onrender.com">View Live version(Takes 10s to load)</a>
     ·
     <a href="https://github.com/thetechgeeek/Whatsapp-Chatlist/issues">Report Bug</a>
     ·
